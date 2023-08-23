@@ -1,0 +1,141 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header, footer {
+  width: 100%;
+  height: 100px;
+  background-color: red;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.inner {
+  width: 100%;
+}
+.inner .title {
+  margin-top: 100px;
+  background-color: aliceblue;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: 80px/1 "맑은 고딕";
+}
+.inner .navi {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+  background-color: aqua;
+}
+.inner .navi > .progress {
+  display: none;
+}
+.inner .navi > .btn {
+  width: 60%;
+  height: 3px;
+  background-color: black;
+  position: absolute;
+  display: flex;
+}
+.inner .navi > .btn > li {
+  flex: 1;
+  width: 0%;
+  background-color: #fff;
+}
+.inner .navi > .btn > li > a > span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.inner .navi > .btn > li > a > p {
+  position: absolute;
+  top: 20px;
+  color: black;
+}
+.inner .navi > .btn > li.on > a > span {
+  background-color: #fff;
+}
+.inner .navi > .btn > li.on > a > p {
+  color: #fff;
+}
+.inner .navi.fixed {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 10%;
+  height: calc(100vh - 200px);
+}
+.inner .navi.fixed > .btn {
+  flex-direction: column;
+  width: 3px;
+  height: 70%;
+  margin-left: -70px;
+}
+.inner .navi.fixed > .btn > li {
+  flex: 1;
+  position: relative;
+  width: 3px;
+  height: 0%;
+  background-color: antiquewhite;
+}
+.inner .navi.fixed > .btn > li > a > span {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.inner .navi.fixed > .btn > li > a > p {
+  top: 0;
+  left: 30px;
+}
+.inner .content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: bold 100px/1 "arial";
+  color: #fff;
+}
+.inner .content.content1 {
+  height: 50vh;
+  background-color: beige;
+}
+.inner .content.content2 {
+  height: 200vh;
+  background-color: black;
+}
+.inner .content.content3 {
+  height: 100vh;
+  background-color: gray;
+}
+.inner .content.content4 {
+  height: 150vh;
+  background-color: yellow;
+}
+
+/*# sourceMappingURL=style.css.map */
